@@ -11,7 +11,7 @@ int main()
 {
 	char c;
 	scanf("%c", &c);
-	 
+
 	((47 < c)  && (c < 58)) ? printf("%c\n", c) : printf("ZNAK\n");
 
 	if ( (47 < c)  && (c < 58))
