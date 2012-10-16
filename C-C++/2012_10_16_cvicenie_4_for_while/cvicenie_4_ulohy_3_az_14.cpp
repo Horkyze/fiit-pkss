@@ -1,6 +1,12 @@
 /*
- * bellus_cvicenie_4_uloha_2.cpp 	
- * Cykly
+ * V niektorych prikladoch je pouzity string, to sme zatial nebrali, ale myslim ze inak sa to ani neda spravit.
+ * Ak sa to da aj bez stringu alebo pola, tak budem prekvapeni.
+ * Horkyze (Matej Bellus) - 16.10.2012
+ */
+
+/*
+ * cvicenie_4_ulohy_3_az_14.cpp 	
+ * Cykly, String, Pole
  * Autor: 		Matej Bellus
  * Date: 		16.10. 2012
  * PKSS 26
