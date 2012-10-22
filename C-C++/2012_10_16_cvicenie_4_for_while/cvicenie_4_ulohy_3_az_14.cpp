@@ -168,10 +168,95 @@ void uloha8()
      printf("%i %i\n", male, velke);
 }
 
+void uloha9()
+{
+     int n,c;
+     char buffer [33];
+     scanf("%i", &n);
+     
+     string s = ""; 
+     
+     for(int i = 0; i < n; i++)
+     {
+             scanf("%i",&c);
+             if ((c > 0) && (c <= 100))
+             {
+                itoa(c,buffer,10);
+				s += buffer;
+				s += " "; 
+             }
+     }
+     cout << s << endl;
+}
+
+void uloha10()
+{
+	int a, b;
+	scanf("%i %i", &a, &b);
+
+	for(int i = a; i <= b; i++)
+	{
+		if (i % 3 == 0)
+			printf("%i ", i);
+	}
+}
+
+void uloha11()
+{
+	int a, b, d;
+	scanf("%i %i %d", &a, &b, &d);
+
+	for(int i = a; i <= b; i++)
+	{
+		if (i % d == 0)
+			printf("%i ", i);
+	}
+}
+
+void uloha12()
+{
+	float vyska, mass, bmi;
+	int n, podvaha = 0, normal = 0, nadvaha = 0, tucko = 0;
+	scanf("%i", &n);
+	float bmis[100] = {NULL}; // bmis[n] mi nechce zobrat. Takto sa to nema robit, 
+	// ale nebudem tu dynamicky alokovat pamet. Keby ich na vtupe bolo viac
+	// ako 100, tak program ma pruser == spadne.
+	for(int i = 0; i < n; i++)
+	{
+		scanf("%f %f",&vyska, &mass);
+		vyska = vyska/100;
+		bmi = (mass)/(vyska*vyska);
+		bmis[i] = (mass)/(vyska*vyska);
+		if (bmi <= 18.5)
+			podvaha++;
+		if ((bmi > 18.5) && (bmi < 25))
+			normal++;
+		if ((bmi >= 25) && (bmi < 30))
+			nadvaha++;
+		if (bmi >= 30)
+			tucko++;
+	}
+	for(int i = 0; i < 100; i++)
+	{
+		if (bmis[i] != NULL)
+		{
+			printf("%.3f\n", bmis[i]);
+		}
+		else // ked narazi na prvu NULL, tak vsetky ostatne su uz NULL
+		{    // tak netreba robit cely cyklus
+			break;
+		}
+	}
+	printf("Podvaha: %i\n", podvaha);
+	printf("Normalna hmotnost: %i\n", normal);
+	printf("Nadvaha: %i\n", nadvaha);
+	printf("Obezita: %i\n", tucko);
+
+}
+
 int main()
 {
-	uloha8();	
-
+	uloha12();	
 
 	system("PAUSE");
 	return 0;
