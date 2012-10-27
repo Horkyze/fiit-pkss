@@ -284,11 +284,7 @@ void uloha14()
 			ok =  true;
 		}
 
-		if ( (k > 1) && (i <= pred*2) && (i >= pred/2) )
-		{
-			ok = true;
-		}
-		else 
+		if ( ! ((k > 1) && (i <= pred*2) && (i >= pred/2)) )
 		{
 			ok = false;
 		}
@@ -296,6 +292,7 @@ void uloha14()
 	(ok) ? printf("Postupnost je spravna\n") : printf("Postupnost nie je spravna\n");
 	
 }
+
 int main()
 {
 	uloha14();	
