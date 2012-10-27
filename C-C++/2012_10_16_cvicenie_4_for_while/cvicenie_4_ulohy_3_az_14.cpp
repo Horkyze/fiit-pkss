@@ -251,12 +251,54 @@ void uloha12()
 	printf("Normalna hmotnost: %i\n", normal);
 	printf("Nadvaha: %i\n", nadvaha);
 	printf("Obezita: %i\n", tucko);
-
 }
 
+// funguje iba do urciteho rozsahu, pretoze faktorial je velmi velke cislo
+void uloha13()
+{
+	long sum;
+	int n;
+	scanf("%i", &n);
+	sum = 1;
+
+	for(int i = 2; i <= n; i++)
+		sum = sum * i;
+	printf("%i", sum);
+}
+
+void uloha14()
+{
+	int n, i, pred;
+	bool ok = false;
+	scanf("%i", &n);
+
+	for(int k = 1; k <= n; k++)
+	{
+		if ( k > 1)
+		{
+			pred = i;
+		}
+		scanf("%i", &i);
+		if ( (k == 1) && (i < 11) && (i > -1) ) // if podmiakna a je OK		
+		{
+			ok =  true;
+		}
+
+		if ( (k > 1) && (i <= pred*2) && (i >= pred/2) )
+		{
+			ok = true;
+		}
+		else 
+		{
+			ok = false;
+		}
+	}
+	(ok) ? printf("Postupnost je spravna\n") : printf("Postupnost nie je spravna\n");
+	
+}
 int main()
 {
-	uloha12();	
+	uloha14();	
 
 	system("PAUSE");
 	return 0;
