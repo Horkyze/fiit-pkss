@@ -129,6 +129,50 @@ void uloha1()
 	printf("\n");
 }
 
+int parne(int x[], int y[], int pocet)
+{
+	int i = 0, pocet_parnych = 0;
+	for(; i < pocet; i++)
+	{
+		if(x[i] % 2 == 0)
+		{
+			y[pocet_parnych] = x[i];
+			pocet_parnych++;
+		}
+	}
+	return pocet_parnych;
+}
+
+void uloha2()
+{
+	int n, i = 0;
+	int input[50] = {0};
+	int output[50];
+
+	scanf("%i", &n);
+
+	for(i = 0; i < n; i++)
+	{
+		scanf("%i", &input[i]);
+	}
+
+	printf("Povodne pole:");
+	for(i = 0; i < n; i++)
+	{
+		printf(" %i", input[i]);
+	}
+	printf("\n");
+
+	printf("Pocet parnych prvkov pola: %i\n", parne(input, output ,n));
+
+	printf("Parne cisla:");
+	for(i = 0; i < parne(input, output ,n); i++)
+	{
+		printf(" %i", output[i]);
+	}
+	printf("\n");
+}
+
 int main() 
 {
 
